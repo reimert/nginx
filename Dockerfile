@@ -94,6 +94,7 @@ WORKDIR /etc/nginx
 COPY ./nginx.conf /etc/nginx/conf
 
 COPY ./index.html /etc/nginx/html
+COPY ./30x.html /etc/nginx/html
 COPY ./40x.html /etc/nginx/html
 COPY ./50x.html /etc/nginx/html
 
