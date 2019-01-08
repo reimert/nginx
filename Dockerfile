@@ -30,6 +30,7 @@ RUN apk update && apk add vim curl openssl-dev pcre-dev zlib-dev build-base && \
 
 WORKDIR /tmp/nginx/nginx-${NGINX_VERSION}
 COPY ./ngx_http_header_filter_module.c /tmp/nginx/nginx-${NGINX_VERSION}/src/http
+COPY ./ngx_http_special_response.c /tmp/nginx/nginx-${NGINX_VERSION}/src/http
 
 ######################
 # Create nginx directories
