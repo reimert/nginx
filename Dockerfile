@@ -6,7 +6,7 @@ MAINTAINER R.Smit <reimertsmit@gmail.com>
 # ENVIRONMENT
 ######################
 
-ENV NGINX_VERSION 1.13.2
+ENV NGINX_VERSION 1.14.2
 
 ######################
 # nginx User
@@ -94,6 +94,7 @@ WORKDIR /etc/nginx
 COPY ./nginx.conf /etc/nginx/conf
 
 COPY ./index.html /etc/nginx/html
+COPY ./40x.html /etc/nginx/html
 COPY ./50x.html /etc/nginx/html
 
 ######################
