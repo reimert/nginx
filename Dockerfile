@@ -1,12 +1,12 @@
-FROM alpine:3.6
+FROM alpine:3.11
 
-MAINTAINER R.Smit <reimertsmit@gmail.com>
+LABEL "maintainer" "R.Smit <reimertsmit@gmail.com>"
 
 ######################
 # ENVIRONMENT
 ######################
 
-ENV NGINX_VERSION 1.14.2
+ENV NGINX_VERSION 1.16.1
 
 ######################
 # nginx User
@@ -108,6 +108,6 @@ RUN apk del build-base && \
     rm -rf /var/cache/apk && \
     rm -rf /tmp/nginx
 
-EXPOSE 80 443
+EXPOSE 80 443 8443
 
 CMD ["nginx", "-g", "daemon off;"]
